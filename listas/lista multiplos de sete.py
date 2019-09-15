@@ -6,11 +6,5 @@ while i<len(numeros):
         mul_sete.append(numeros[i])
         i+=1
     else:
-        i+=1
-       
-    
+        i+=1          
 print(mul_sete)
-
-
-
-
