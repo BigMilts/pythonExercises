@@ -9,9 +9,7 @@ def max_recursivo(lista):
         else:
             lista.pop(i)
             return max_recursivo(lista)
-
 lista1 = [76,34,5,6,200,7,8,103]
-
 print(max_recursivo(lista1))
                     
         
