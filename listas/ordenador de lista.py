@@ -17,12 +17,4 @@ while elementos < len(lista):
         else:
             posicao+=1
     elementos+=1
-print(lista)            
-        
-
-
-
-
-
-
-
+print(lista)                  
