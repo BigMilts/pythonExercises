@@ -11,45 +11,4 @@ for p in palavras:
 
 
 print(caracter)
-print(i)        
-        
-        
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#algos=["" for s in algos]
+print(i)           
