@@ -1,3 +1,4 @@
+#bublbe_sort
 vetor=[2.00,3.4,6.67,3.98,21.32,3.00]
 def ordenador(vetor):
     elementos = 0
@@ -15,7 +16,3 @@ def ordenador(vetor):
     return(vetor)
 
 print(ordenador(vetor))
-
-
-                    
-            
