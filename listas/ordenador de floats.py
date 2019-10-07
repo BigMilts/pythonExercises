@@ -1,4 +1,4 @@
-#bublbe_sort
+#bubble_sort
 vetor=[2.00,3.4,6.67,3.98,21.32,3.00]
 def ordenador(vetor):
    for i in range(1,len(vetor)-1):
