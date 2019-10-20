@@ -8,6 +8,7 @@ class Node:
         self.__value = value
         self.__prox = prox
         self.__ante = ante
+    #getters e seters
     def returnValue(self):
         return self.__value
     def returnProx(self):
@@ -195,12 +196,7 @@ class ListaDuplamenteEncadeada:
                     elem.setAnte(aux)
                     self.__size+=1
             return f'l1 ={total}, l2 =[]'
-
-
-        
-        
-         
-       
+                         
 if __name__ == '__main__':
     test = ListaDuplamenteEncadeada()
     #test.anexar(1)
@@ -208,8 +204,4 @@ if __name__ == '__main__':
     test1 = ListaDuplamenteEncadeada('algoritmos')
     test2 =ListaDuplamenteEncadeada([1,2,3,4,6])
     test2.inserir(4,5)
-    test2.concatenar([7,8,9,10])
-    #print(test)
-    #test2 = Fila()
-    #test3 = Pilha()              
-                
+    test2.concatenar([7,8,9,10])                     
