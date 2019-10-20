@@ -169,17 +169,3 @@ if __name__ == '__main__':
     pil = Stack('123')
     pil.pop()
     pil.push(3)
-    
-    #print(test.dequeue())
-    #print(test.dequeue())
-    
-
-
-
-
-        
-        
-
-
-
-    
