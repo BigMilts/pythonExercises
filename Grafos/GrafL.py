@@ -108,10 +108,7 @@ class GrafL:
                 for i in self.__adjl.values():
                     for j in range(len(i)):
                         if i[j][0] == v1: i.pop(j)
-                        
-        
-        
-                
+                                                 
     def __getitem__(self,index):
         if index in self.__adjl.keys():
             x = []
@@ -122,8 +119,6 @@ class GrafL:
                     x += [(index,i[0],i[1])]
             return x
         raise IndexError(f'There is no vertex {index} in the Graph')
-
-
     
     def add_vertex(self,v1,v2):
         if not v1 in self.__adjl.keys() and v2 in self.__adjl.keys():
@@ -176,6 +171,4 @@ if __name__ == '__main__':
     #print(test2.pass_to_matrix())
     #test2.remove_edge(4,0)
     print(test2.max_edge())
-    print(test2.min_edge())
-    
-    
+    print(test2.min_edge())  
