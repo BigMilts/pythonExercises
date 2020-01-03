@@ -2,16 +2,18 @@ import numpy as np
 
 class GrafM:
     def __init__(self,iterable,**kwargs):
-        self.__directed = kwargs.get('directed',False)
-        self.__pondereted = kwargs.get('pondereted',False)
+        self.__directed = kwargs.get('directed', False)
+        self.__pondereted = kwargs.get('pondereted', False)
         self.__madj = np.zeros((self.__build_veterxs(iterable),self.__build_veterxs(iterable)))
         if iterable:
             return self.__build__graph(iterable) 
 
     def is_pondereted(self):return self.__pondereted
     def is_directed(self):return self.__directed
+    
     def size(self):
         return len(self.__madj)
+    
     def __build_veterxs(self,iterable):
         vertexs =[]
         for i in iterable:
@@ -20,6 +22,7 @@ class GrafM:
             if i[1] not in vertexs:
                 vertexs += [i[1]]
         return len(vertexs)
+    
     def __getitem__(self,index):
         if index > len(self.__madj)-1:
             raise ValueError
@@ -30,8 +33,10 @@ class GrafM:
                     x += [(index,i,int(self.__madj[index][i]))]
                 else: x += [(index,i)]
         return x
+    
     def back(self):
         return self.__back()
+    
     def __back(self):
         result = []
         for l in range(len(self.__madj)):
@@ -131,14 +136,11 @@ class GrafM:
             if not self.__directed: self.__madj[v2][v1] = 0
         else:
             raise ValueError
-
-  
-
+            
 if __name__ == '__main__':
     test = GrafM([(0,1),(0,2),(0,3),(1,2),(2,3)], directed = True, pondereted = False)
     test1 =  GrafM([(0,1),(0,2),(0,3),(1,2),(2,3)])
     test2 = GrafM([(0,2,5),(0,5,3),(1,3,1),(2,0,5),(2,3,6),(3,1,1),(3,2,6),(3,5,9),(4,0,7),(5,0,3),(5,3,9)],directed = True ,pondereted = True)
     print(test2)
     #print(test2.pass_to_ladj())
-    print(test2.min_edge())
-        
+    print(test2.min_edge())        
