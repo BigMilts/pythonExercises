@@ -15,10 +15,9 @@ def _dfs(Graf,v,visited):
         visited += [v]
         for i in Graf.list_ajd(v):
             _dfs(Graf,i,visited)
-    return visited
-    
-        
+    return visited     
 ########################################################
+
 def width_search(Graf):
     if type(Graf) is not GrafL:
         Graf = Graf.back()
@@ -26,7 +25,6 @@ def width_search(Graf):
     _bfs(Graf,0)
     return ''
     
-
 def _bfs(Graf,vertex):
     marked = [False] * Graf.size()
     queue = []
@@ -46,15 +44,10 @@ def _bfs(Graf,vertex):
                     queue += [i[0]]
                     marked[i[0]] = True
     print(*predessesor)
-                
-    
-    
+                   
 if __name__ == '__main__':
     test2 = GrafM([(0,2,5),(0,5,3),(1,3,1),(2,0,5),(2,3,6),(3,1,1),(3,2,6),(3,5,9),(4,0,7),(5,0,3),(5,3,9)],directed = True ,pondereted = True)
     test1 =  GrafL([(0,1),(0,2),(0,3),(1,2),(2,3)])
     print(test2)
     print(depth_search(test2))
     print(width_search(test2))
-    
-    
-    
