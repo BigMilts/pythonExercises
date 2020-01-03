@@ -1,8 +1,8 @@
 class GrafL:
     def __init__(self,iterable,**kwargs):
         self.__adjl = {}
-        self.__directed = kwargs.get('directed',False)
-        self.__pondereted = kwargs.get('pondereted',False)
+        self.__directed = kwargs.get('directed', False)
+        self.__pondereted = kwargs.get('pondereted', False)
         if iterable:
             return self.__build_graph(iterable)
 
@@ -26,9 +26,7 @@ class GrafL:
                 if i[0] not in self.__adjl.keys():
                     self.__adjl[i[0]] = []
                 if i[1] not in self.__adjl.keys():
-                    self.__adjl[i[1]] = []
-
-                
+                    self.__adjl[i[1]] = []      
                 if not self.__pondereted:
                     self.__adjl[i[0]] += [i[1]]
                     if not self.__directed: self.__adjl[i[1]] += [i[0]]
@@ -71,7 +69,6 @@ class GrafL:
             return len(self.__adjl[v1])
         else:raise
 
-
     def inside_grau(self,v1):
         grau = 0
         if not self.__pondereted:
@@ -94,10 +91,7 @@ class GrafL:
             else:
                 if v2 in self.__adjl[v1]:self.__adjl[v1].remove(v2)
                 if not self.__directed and v1 in self.__adjl[v2]:self.__adjl[v2].remove(v1)
-                
-                
-                    
-
+                                                 
     def remove_vertex(self,v1):
         if v1 in self.__adjl.keys():
             self.__adjl[v1] = []
@@ -134,7 +128,6 @@ class GrafL:
             else:
                 self.__adjl[v1] += [(v2,p)]
                 if not self.__directed:self.__adjl[v2] += [(v1,p)]
-
                 
     def max_edge(self):
         if self.__pondereted:
