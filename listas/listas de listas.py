@@ -6,8 +6,6 @@ def maiorEntreAsListas(listaDeListas):
         maiores.append(maior(lista))
     return maior(maiores)   
 
-
-
 #maior elemento de uma lista
 def maior(lista):
     maior=lista[0]
@@ -15,17 +13,3 @@ def maior(lista):
         if elemento >maior:
             maior=elemento
     return(maior)        
-
-
-"""
-
-def maiorEntreASlistasNoob(listasDelistas):
-    todos= []
-    for lista in listaDeListas:
-        todos = todos +çista
-
-    return maior(todos)
-    
-        """
-
-"""
