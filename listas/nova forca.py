@@ -43,5 +43,4 @@ if acertou == True:
 if tentativas == 0:
     acertou = True
     print("você perdeu todas as tentativas")
-    print("A palavra era:",secreta)
-               
+    print("A palavra era:",secreta)              
