@@ -9,8 +9,4 @@ while linha <len(matriz1):
         resultado[linha].append(matriz1[linha][coluna] + matriz2[linha][coluna])
         coluna+=1
     linha+=1
-
-
 print(resultado)
-
-        
