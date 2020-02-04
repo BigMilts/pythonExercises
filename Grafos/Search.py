@@ -10,11 +10,11 @@ def depth_search(Graf):
     print(*result)
     return ''
     
-def _dfs(Graf,v,visited):
+def _dfs(Graf, v, visited):
     if v not in visited:
         visited += [v]
         for i in Graf.list_ajd(v):
-            _dfs(Graf,i,visited)
+            _dfs(Graf, i, visited)
     return visited     
 ########################################################
 
@@ -25,7 +25,7 @@ def width_search(Graf):
     _bfs(Graf,0)
     return ''
     
-def _bfs(Graf,vertex):
+def _bfs(Graf, vertex):
     marked = [False] * Graf.size()
     queue = []
     queue+= [vertex]
@@ -33,11 +33,11 @@ def _bfs(Graf,vertex):
     predessesor = []
     while queue:
         vert = queue.pop(0)
-        predessesor +=[vert]             
+        predessesor += [vert]             
         for i in Graf.list_ajd(vert):
             if not Graf.is_pondereted():
                 if not marked[i]:
-                    queue +=[i]
+                    queue += [i]
                     marked[i] = True
             else:
                 if not marked[i[0]]:
