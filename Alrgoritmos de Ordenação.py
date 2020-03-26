@@ -26,8 +26,7 @@ def insertion(A,size):
             j-=1
         A[j+1] = key
         
-        
-
+       
 vetor = [random.randint(1,100) for x in range(20)]
 print(vetor)
 b2(vetor,len(vetor))
